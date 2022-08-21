@@ -1,0 +1,101 @@
+.container {
+  background: var(--shadow);
+  width: 95vw;
+  max-width: 481px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--body);
+  transition: 0.3s linear;
+
+  .avatar {
+    width: 5rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 3px solid var(--body);
+    z-index: 10;
+  }
+  h3,
+  h5 {
+    color: var(--font);
+    letter-spacing: 2px;
+    line-height: 2;
+    z-index: 10;
+    span {
+      color: var(--hover);
+      font-size: 15px;
+    }
+  }
+  p {
+    color: var(--font);
+  }
+  .links__block {
+    margin-top: 1rem;
+    .vertical__menu {
+      width: auto;
+      height: 270px;
+      overflow-y: auto;
+    }
+    .link {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      color: var(--font);
+      background: var(--shadow);
+      margin: 1.75rem 15px;
+      padding: 0.5rem;
+      font-weight: bold;
+      outline: 2px solid var(--body);
+      outline-offset: 4px;
+      letter-spacing: 2px;
+      transition: all 0.3s linear;
+      &:hover {
+        background: transparent;
+        color: var(--hover);
+      }
+    }
+    .social__links {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      .social__link {
+        font-size: 1.75rem;
+        color: var(--font);
+        transition: all 0.3s linear;
+        &:hover {
+          transform: scale(1.1);
+          color: var(--hover);
+        }
+      }
+    }
+  }
+  .theme-btn {
+    z-index: 9999;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--body);
+    cursor: pointer;
+    color: var(--font);
+    transition: 0.3s linear;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .theme-btn .uil-wind-sun,
+  .theme-btn.sun .uil-wind-moon {
+    display: none;
+  }
+
+  .theme-btn.sun .uil-wind-sun {
+    display: block;
+  }
+}

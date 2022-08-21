@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300;1,400;1,700;1,900&display=swap");
+.container {
+  background: var(--shadow);
+  width: 95vw;
+  max-width: 481px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: 2px solid var(--body);
+  transition: 0.3s linear;
+}
+.container .avatar {
+  width: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 3px solid var(--body);
+  z-index: 10;
+}
+.container h3,
+.container h5 {
+  color: var(--font);
+  letter-spacing: 2px;
+  line-height: 2;
+  z-index: 10;
+}
+.container h3 span,
+.container h5 span {
+  color: var(--hover);
+  font-size: 15px;
+}
+.container p {
+  color: var(--font);
+}
+.container .links__block {
+  margin-top: 1rem;
+}
+.container .links__block .vertical__menu {
+  width: auto;
+  height: 270px;
+  overflow-y: auto;
+}
+.container .links__block .link {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  color: var(--font);
+  background: var(--shadow);
+  margin: 1.75rem 15px;
+  padding: 0.5rem;
+  font-weight: bold;
+  outline: 2px solid var(--body);
+  outline-offset: 4px;
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+}
+.container .links__block .link:hover {
+  background: transparent;
+  color: var(--hover);
+}
+.container .links__block .social__links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+}
+.container .links__block .social__links .social__link {
+  font-size: 1.75rem;
+  color: var(--font);
+  transition: all 0.3s linear;
+}
+.container .links__block .social__links .social__link:hover {
+  transform: scale(1.1);
+  color: var(--hover);
+}
+.container .theme-btn {
+  z-index: 9999;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  font-size: 1.5em;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--body);
+  cursor: pointer;
+  color: var(--font);
+  transition: 0.3s linear;
+}
+.container .theme-btn:hover {
+  transform: scale(1.1);
+}
+.container .theme-btn .uil-wind-sun,
+.container .theme-btn.sun .uil-wind-moon {
+  display: none;
+}
+.container .theme-btn.sun .uil-wind-sun {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: url(/src/img/IMG_20211231_184151.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+:root {
+  --body: #e4fbff;
+  --font: #f7f7f7;
+  --hover: #ff1700;
+  --shadow: 0px 0px 20px #e0e0e0;
+  --filter: invert(1);
+}
+
+.dark-theme {
+  --body: #f90716;
+  --font: #eeeeee;
+  --filter: invert(0);
+}
+
+@media screen and (min-width: 768px) {
+  .container .links__block .vertical__menu {
+    width: auto;
+    height: 272px;
+  }
+  .container .theme-btn {
+    right: 15px;
+    top: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
